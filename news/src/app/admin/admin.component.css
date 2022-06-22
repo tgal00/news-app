@@ -1,0 +1,134 @@
+*{
+   margin: 0;
+   padding: 0;
+}
+.container{
+   margin-top: 5%;
+   width: 80%;
+}
+
+.article{
+   padding: 1%;
+   margin-bottom: 10px;
+   overflow: auto;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+   border-radius: 10px;
+}
+
+.delete, .edit{
+   padding: 10px 20px;
+   transition: 0.3s;
+   border-radius: 5px;
+   font-variant: small-caps;
+   text-transform: uppercase;
+   font-weight: bold;
+}
+.edit{
+   margin-right: 10px;
+   background-color:darkorange;
+   border: none;
+   color: white;
+}
+.delete{
+   background-color: crimson;
+   border: none;
+   color: white;
+}
+
+.edit:hover{
+   background-color: rgb(235, 131, 3);
+   cursor: pointer;
+}
+.delete:hover{
+   background-color: rgb(192, 17, 52);
+   cursor: pointer;
+}
+h1{
+   font-size: 18px;
+   word-break: keep-all;
+}
+p{
+   font-size: 12px;
+}
+.headline{
+   width: 45%;
+   word-break: break-all;
+}
+
+a{
+   color: black
+}
+a:hover{
+   color: #666;
+   text-decoration: none;
+}
+
+
+
+input[type=text]{
+   width: 50%;
+   display: inline-block;
+   padding: 5px;
+   font-size: 20px;
+   outline: none;
+   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+   border: none;
+   padding-left: 10px;
+}
+input[type=submit]{
+   border-radius: 10px;
+   margin-left: 10px;
+   display: inline-block;
+   padding: 5px 10px;
+   font-size: 20px;
+   outline: none;
+   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+   border: none;
+   transition: 0.2s;
+   color: #666;
+}
+input[type=submit]:hover{
+   color: white;
+   background-color: rgb(72, 204, 32);
+}
+input[type=submit]:disabled{
+   cursor: not-allowed;
+   background-color: rgb(255, 223, 223);
+}
+.add{
+   padding: 1%;
+   margin-bottom: 10px;
+   overflow: auto;
+   display: flex;
+   justify-content:space-between;
+   align-items: baseline;
+   box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+   border-radius: 10px;
+}
+.addCategory{
+   width: 70%;
+   word-break: break-all;
+   float: right;
+}
+
+.addNews{
+   border-radius: 10px;
+   margin-left: 10px;
+   display: inline-block;
+   padding: 5px 10px;
+   font-size: 20px;
+   outline: none;
+   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+   border: none;
+   transition: 0.2s;
+   color: #666;
+   background-color: rgb(238, 238, 238);
+}
+.addNews:hover{
+   cursor: pointer;
+   color: white;
+   background-color: rgb(72, 204, 32);
+}

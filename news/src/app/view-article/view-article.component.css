@@ -1,0 +1,177 @@
+*{
+   margin: 0;
+   padding: 0;
+}
+
+.container{
+   width: 60%;
+   margin-top: 50px;
+   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+   box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+   margin-bottom: 10px;
+   padding-bottom: 20px;
+   border-radius: 10px;
+}
+
+img{
+   width: 100%;
+}
+
+span{
+   letter-spacing: 5px;
+   font-size: 32px;
+   font-variant: small-caps;
+   color: cornflowerblue;
+}
+
+p{
+   font-size:20px;
+}
+
+.comments{
+   border-radius: 10px;
+   width: 60%;
+   margin-top: 10px;
+   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+   box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+   margin-bottom: 100px;
+   margin: 0 auto;
+   margin-bottom: 50px;
+   padding: 10px;
+}
+
+.newPost{
+   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+   border: none;
+  border-radius: 10px;
+  background-color: rgb(13, 148, 31)  ;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 5px 10px;
+  transition-duration: 0.4s;
+  font-variant: small-caps;
+   text-transform: lowercase;
+   font-weight: 900;
+   letter-spacing: 2px;
+   margin: 20px 0;
+}
+.newPost:hover{
+   background-color: rgb(9, 122, 24)  ;
+}
+
+.newPostCancel{
+   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+   border: none;
+   font-variant: small-caps;
+   text-transform: lowercase;
+  border-radius: 10px;
+  background-color: red  ;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 5px 10px;
+  transition-duration: 0.4s;
+ 
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-weight: 900;
+   letter-spacing: 2px;
+}
+.newPostCancel:hover{
+   background-color: rgb(196, 6, 6)  ;
+}
+
+.newCommentForm{
+   
+   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+}
+.newCommentForm input{
+   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+   box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
+   outline: none;
+   border: none;
+   background-color:rgb(229, 252, 253) ;
+   font-size: 20px;
+   padding: 5px;
+   margin-bottom: 10px;
+}
+.newCommentForm textarea{
+   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+   box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
+   border: none;
+   font-size: 20px;
+   border-radius: 10px 10px 1px;
+   padding: 5px;
+   outline: none;
+}
+
+
+.newCommentForm button{
+   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+   border: none;
+  background-color: rgb(255, 192, 119)  ;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 5px 10px;
+  transition-duration: 0.4s;
+  margin-right: 20px;
+  margin-bottom: 50px;
+  font-variant: small-caps;
+   text-transform: lowercase;
+   border-radius: 10px;
+   font-weight: 900;
+   letter-spacing: 2px;
+}
+
+.newCommentForm button:hover{
+   background-color: rgb(255, 143, 14)  ; 
+}
+
+.newCommentForm button:disabled{
+  cursor:not-allowed; 
+  background-color: rgba(153, 15, 15, 0.13);
+}
+
+.commentSection{
+   border-radius: 10px;
+   box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+   padding: 10px;
+   margin-bottom: 10px;
+}
+
+.blabla{
+   font-variant: small-caps;
+   text-transform: lowercase;
+   letter-spacing: 5px;
+   font-weight: 900;
+   margin-bottom: 20px;
+}
+
+.deleteCommentButton{
+   background-color: red;
+   border: none;
+   padding: 5px 10px;
+   color: white;
+   border-radius: 10px;
+   text-transform: lowercase;
+   font-variant: small-caps;
+   letter-spacing: 2px;
+}
+.deleteCommentButton:hover{
+   background-color: rgb(209, 0, 0);
+
+}

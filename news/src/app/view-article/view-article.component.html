@@ -1,0 +1,35 @@
+<div class="container">
+   <span>{{article.category}}</span>
+   <img src={{article.imgUrl}}>
+   <h1>{{article.headline}}</h1>
+   <p>{{article.datePublished|date}}</p><br><br>
+   <p>{{article.story}}</p>
+</div>
+
+<div class="comments">
+   
+   <button class="newPost" *ngIf="!newComment&&authenticated" (click)="newComment=!newComment">New comment</button>
+   <button class="newPostCancel" *ngIf="newComment&&authenticated" (click)="newComment=!newComment">Cancel</button>
+
+
+   <form class="newCommentForm" *ngIf="authenticated&&newComment">
+      <div>
+         <label>User:</label><br>
+         <input type="text" name="test" [(ngModel)]="user.name" disabled>
+      </div>
+
+      <div>
+         <label>Comment:</label><br>
+         <textarea [(ngModel)]="commentText" name="commentText" rows="5" cols="50"></textarea>
+      </div>
+
+      <button type="button" (click)="onComment()" [disabled]="commentText.length==0">Comment</button>
+   </form>
+   <p class="blabla">Comments</p>
+   <div class="commentSection" *ngFor="let c of comments; let i = index">
+      <p>by: <b>{{getUserById(c.userId)}}</b> at: {{c.datePublished|date}}</p>
+      <hr>
+      <p>{{c.comment}}</p>
+      <button class="deleteCommentButton" *ngIf="c.userId==user.id&&authenticated" type="button" (click)="deleteComment(i)">Delete</button>
+
+</div>

@@ -1,0 +1,15 @@
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<div class="container">
+   <h1 class="category">{{category}}</h1>
+   <div class="articles">
+      <div *ngFor="let a of temp">
+         <div class="article">
+            <a [routerLink]="['../article', a.id]">
+               <img src="{{a.imgUrl}}">
+               <h1>{{a.headline}}</h1>
+               <p>{{a.datePublished|date}}</p>
+            </a>
+         </div>
+      </div>
+   </div>
+</div>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+</head>
+
+<body>
+   
+
+   <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+         <ul class="nav navbar-nav">
+            <li><a [routerLink]="['']">Home</a></li>
+            <li><a [routerLink]="['world']">World</a></li>
+            <li><a [routerLink]="['tech']">Tech</a></li>
+            <li><a [routerLink]="['other']">Other</a></li>
+         </ul>
+         
+         <ul class="nav navbar-nav admin">
+            <li><a *ngIf="authenticated&&user.level==1" [routerLink]="['/admin']">Admin</a></li>
+            <!--<li><a *ngIf="authenticated&&user.level==1" [routerLink]="['/addArticle']">Add article</a></li>-->
+         </ul>
+         <ul class="nav navbar-nav navbar-right">
+            <li *ngIf="!authenticated"><a [routerLink]="['/login']"><span class="glyphicon glyphicon-log-in"></span>
+                  Log in</a></li>
+            <li *ngIf="!authenticated"><a [routerLink]="['/register']"><span class="glyphicon glyphicon-user"></span>
+                  Register</a></li>
+            <li *ngIf="authenticated"><a [routerLink]="['/profile']"><span class="glyphicon glyphicon-user"></span>
+                  {{user.username}}</a></li>
+            <li *ngIf="authenticated"><a (click)="onLogout()" [routerLink]="['/login']"><span
+                     class="glyphicon glyphicon-log-out"></span>
+                  Log out</a></li>
+         </ul>
+      </div>
+   </nav>
+
+</body>
+
+</html>

@@ -1,0 +1,16 @@
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<div class="container">
+   <div *ngFor="let c of categories" >
+      <h1 class="category">{{c.category}}</h1>
+      <div class="articles">
+         <div *ngFor="let a of articles | topNews:c.category:3">
+            <div class="article">
+               <a [routerLink]="['article', a.id]" >
+                  <img src="{{a.imgUrl}}">
+                  <h1>{{a.headline}}</h1>
+               </a>
+            </div>
+         </div>
+      </div><hr>
+   </div>
+</div>

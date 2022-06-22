@@ -1,0 +1,20 @@
+<div class = "container">
+   <form novalidate #f='ngForm' method="post">
+      
+      <label>Naslov vijesti</label>
+      <input type="text" required [(ngModel)]="article.headline" name="headline">
+
+      <label>Text članka</label>
+      <textarea required [(ngModel)]="article.story" name="story"></textarea>
+
+      <label>Kategorija</label>
+      <select [(ngModel)]="article.category" name="category" required name="category">
+         <option *ngFor="let c of categories" [value]="c.category" >{{c.category}}</option>
+      </select>
+
+      <label>Url slike</label>
+      <input type="text" required [(ngModel)]="article.imgUrl" name="imgUrl">
+
+      <input type="submit" value="Dodaj vijest" (click)="post()" [disabled]="!f.valid">
+   </form>
+</div>

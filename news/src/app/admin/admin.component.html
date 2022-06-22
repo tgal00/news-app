@@ -1,0 +1,29 @@
+<div class="container">
+   <div class="add">
+      <div class="addNewsDiv">
+         <a class="addNews" [routerLink]="['/addArticle']">Add news</a>
+      </div>
+      <div class="addCategory">
+         <input type="text" placeholder="Category" [(ngModel)]="category" name="addCategory" required>
+         <input type="submit" value="Add category" (click)="addCategory()" [disabled]="category.length==0">
+         <div>
+            <p>Categories: <span *ngFor="let c of categories">{{c.category}} </span></p>
+         </div>
+      </div>
+   </div>
+
+   <div *ngFor="let a of articles; let i = index" class="article">
+      <div class="headline">
+         <h1><a [routerLink]="['../article', a.id]">{{a.headline}}</a></h1>
+         <p>Category: {{a.category}}</p>
+         <p>Published: {{a.datePublished | date:"dd/MM/yy"}}</p>
+         <p>Comments: {{getCommentsNumber(i)}}</p>
+      </div>
+      <div class="buttons">
+         <button class="edit" (click)="edit(a.id)">Edit</button>
+         <button (click)="delete(i)" class="delete">Delete</button>
+      </div>
+   </div>
+
+
+</div>

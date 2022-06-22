@@ -1,0 +1,26 @@
+<div class="container">
+
+   <div class="userData">
+      <p>User info</p>
+      <p>Name: <b>{{user.name}}</b></p>
+      <p>Username: <b>{{user.username}}</b></p>
+      <p>Email: <b>{{user.email}}</b></p>
+      <p *ngIf="user.level==1">Level: <b>admin</b></p>
+      <p *ngIf="user.level==0">Level: <b>user</b></p>
+   </div>
+
+   <div class="weather" >
+      <input type="text" placeholder="location" [(ngModel)]="location">
+      <input type="submit" (click)="getWeather()" value="Get weather">
+
+      <div class="showWeather">
+         <p><b>{{weather.location.name}}</b>, {{weather.location.region}}</p>
+         <p>{{weather.location.country}} </p>
+         <img src={{weather.current.condition.icon}}> <p><b>{{weather.current.condition.text}}, {{weather.current.temp_c}}°C</b></p>         
+      </div>
+   </div>
+
+   
+
+
+</div>
